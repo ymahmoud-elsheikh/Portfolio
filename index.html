@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yusuf Mahmoud El-Sheikh — Visual Designer &amp; Brand Specialist | Portfolio 2026</title>
+  <title>Yusuf Elsheikh Portfolio</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yusuf Elsheikh Portfolio" />
+  <meta property="og:url" content="https://ymahmoud-elsheikh.github.io/Portfolio/" />
+  <meta property="og:image" content="https://ymahmoud-elsheikh.github.io/Portfolio/share-preview-v1.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Yusuf Elsheikh Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yusuf Elsheikh Portfolio" />
+  <meta name="twitter:image" content="https://ymahmoud-elsheikh.github.io/Portfolio/share-preview-v1.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
@@ -1343,6 +1354,34 @@
         page-break-inside: avoid;
       }
     }
+  
+    /* Video showcase: additive chapter, original layout preserved. */
+    .video-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }
+    .video-card { min-width:0;border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-white); }
+    .video-stage { width:100%;height:360px;display:flex;align-items:center;justify-content:center;background:#0a0a0a; }
+    .video-stage video { display:block;width:100%;height:100%;object-fit:contain; }
+    .video-print-poster { display:none; }
+    .video-copy { padding:22px; }
+    .video-meta { display:flex;justify-content:space-between;gap:12px;color:var(--text-muted);font-size:.72rem;font-weight:600;margin-bottom:12px; }
+    .video-title { font-size:1.2rem;line-height:1.25;font-weight:800;margin-bottom:10px; }
+    .video-credit { display:inline-block;border:1px solid var(--border-strong);border-radius:999px;padding:5px 10px;font-size:.72rem;font-weight:600;margin-bottom:14px; }
+    .video-description { font-size:.88rem;line-height:1.65;color:var(--text-muted);margin-bottom:18px; }
+    .video-source { font-size:.8rem;font-weight:600;text-decoration:underline;text-underline-offset:4px; }
+    .video-source:focus-visible { outline:2px solid currentColor;outline-offset:5px; }
+    .video-intro { max-width:680px;font-size:1rem;color:var(--text-muted);margin-bottom:30px; }
+    #video-work { scroll-margin-top:145px; }
+    @media (max-width:1100px) { .video-grid {grid-template-columns:repeat(2,minmax(0,1fr));} }
+    @media (max-width:680px) {
+      .video-grid {grid-template-columns:1fr;} .video-stage {height:390px;}
+      .topbar-inner {height:auto;min-height:68px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;gap:9px;}
+      .brand-mark {width:100%;font-size:.82rem;}
+      .nav-actions {width:100%;justify-content:flex-end;}
+      .nav-actions button {font-size:.72rem;padding:8px 12px;}
+      .filter-bar-wrap {position:static;}
+      #video-work {scroll-margin-top:118px;}
+    }
+    @media print { .video-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;} .video-card {break-inside:avoid;} .video-stage {height:230px;} .video-stage video {display:none;} .video-print-poster {display:block;max-width:100%;max-height:100%;object-fit:contain;} .video-copy {padding:12px;} .video-title {font-size:1rem;} .video-description {font-size:.75rem;} }
+
   </style>
 </head>
 <body>
@@ -1492,13 +1531,14 @@
     <div class="filter-bar-wrap" id="work">
       <div class="container filter-bar">
         <div class="filter-tabs" role="tablist" aria-label="Portfolio Categories">
-          <button type="button" class="filter-tab active" data-filter="all">All Sections (04)</button>
+          <button type="button" class="filter-tab active" data-filter="all">All Sections (05)</button>
           <button type="button" class="filter-tab" data-filter="ai">01 AI &amp; Retouching</button>
           <button type="button" class="filter-tab" data-filter="campaigns">02 Brand Adaptations</button>
           <button type="button" class="filter-tab" data-filter="commercial">03 Commercial Design</button>
           <button type="button" class="filter-tab" data-filter="branding">04 Visual Identity</button>
+          <button type="button" class="filter-tab" data-filter="video">05 Video &amp; Motion</button>
         </div>
-        <div class="filter-count" id="filterStatus">Showing All 4 Chapters</div>
+        <div class="filter-count" id="filterStatus">Showing All 5 Chapters</div>
       </div>
     </div>
 
@@ -1835,6 +1875,36 @@
         </div>
       </section>
     </div>
+
+    <!-- ================= CHAPTER 05: VIDEO & MOTION ================= -->
+    <div class="work-chapter" data-category="video" id="video-work">
+      <div class="chapter-band"><div class="container chapter-inner"><div><div class="chapter-num">05</div><h2 class="chapter-title">Video Editing<br />&amp; Motion Graphics</h2></div><p class="chapter-subtitle">Travel campaigns, motion-led announcements and furniture showroom reels.</p></div></div>
+      <section class="section section-border"><div class="container"><p class="video-intro">Selected editing and motion work. Each project lists my contribution, with in-page playback and a link to the original post.</p><div class="video-grid"><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-01.jpg" aria-label="Istanbul Travel Promo. Full video editing by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-01.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-01.jpg" alt="Istanbul Travel Promo still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Al Khalil Tours</span><span>1:25</span></div><h3 class="video-title">Istanbul Travel Promo</h3><div class="video-credit">Full video editing</div><p class="video-description">Presenter-led travel promo with destination cards, Arabic offer overlays and branded contact details.</p><a class="video-source" href="https://www.facebook.com/share/r/1HyeZ5VsBZ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-02.jpg" aria-label="Malaysia &amp; Umrah Package. Full video editing by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-02.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-02.jpg" alt="Malaysia &amp; Umrah Package still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Al Khalil Tours</span><span>1:49</span></div><h3 class="video-title">Malaysia &amp; Umrah Package</h3><div class="video-credit">Full video editing</div><p class="video-description">Travel package reel combining presenter footage, hotel and destination cards, dates and Arabic offer graphics.</p><a class="video-source" href="https://www.facebook.com/share/v/1E9iDWHY8Y/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-03.jpg" aria-label="Hajj Draw Announcement. Full motion graphics by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-03.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-03.jpg" alt="Hajj Draw Announcement still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Al Khalil Tours</span><span>0:20</span></div><h3 class="video-title">Hajj Draw Announcement</h3><div class="video-credit">Full motion graphics</div><p class="video-description">Square-format announcement built around an animated ballot box, Arabic typography and brand elements.</p><a class="video-source" href="https://www.facebook.com/share/v/1HvE98XARS/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-04.jpg" aria-label="Hajj Booking Countdown. Full motion graphics by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-04.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-04.jpg" alt="Hajj Booking Countdown still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Al Khalil Tours</span><span>0:20</span></div><h3 class="video-title">Hajj Booking Countdown</h3><div class="video-credit">Full motion graphics</div><p class="video-description">Branded countdown animation with a clock graphic, calendar icons and Arabic booking messages.</p><a class="video-source" href="https://www.facebook.com/share/v/1CTXTPGrUQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-05.jpg" aria-label="Hajj Booking Promo. Video editing &amp; motion graphics by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-05.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-05.jpg" alt="Hajj Booking Promo still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Al Khalil Tours</span><span>1:24</span></div><h3 class="video-title">Hajj Booking Promo</h3><div class="video-credit">Video editing &amp; motion graphics</div><p class="video-description">Presenter-led booking reel with composited travel imagery and branded on-screen graphics.</p><a class="video-source" href="https://www.facebook.com/share/r/1CLkPt5ywd/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-06.jpg" aria-label="Ramadan Umrah Promo. Video editing with motion graphics by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-06.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-06.jpg" alt="Ramadan Umrah Promo still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Al Khalil Tours</span><span>1:09</span></div><h3 class="video-title">Ramadan Umrah Promo</h3><div class="video-credit">Video editing with motion graphics</div><p class="video-description">On-location presenter footage and a hotel walkthrough, with animated Arabic text and location graphics.</p><a class="video-source" href="https://www.instagram.com/reel/DFVyNdeNF2h/?hvrq=MXE2aHhxeXNvOHdoMQ==" target="_blank" rel="noopener noreferrer">View original post &#8599;</a> <a class="video-source" style="margin-left:12px" href="https://www.facebook.com/share/r/1QVug7BZme/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook alternative &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-07.jpg" aria-label="Furniture Showroom Reel 01. Intro &amp; video editing by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-07.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-07.jpg" alt="Furniture Showroom Reel 01 still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Home Mix Furniture</span><span>1:00</span></div><h3 class="video-title">Furniture Showroom Reel 01</h3><div class="video-credit">Intro &amp; video editing</div><p class="video-description">Furniture detail shots and a showroom presentation, with an opening sequence and Arabic captions.</p><a class="video-source" href="https://www.facebook.com/share/r/1C1w5v4Uuz/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article><article class="video-card">
+ <div class="video-stage"><video controls playsinline preload="metadata" poster="videos/poster-08.jpg" aria-label="Furniture Showroom Reel 02. Intro &amp; video editing by Yusuf Mahmoud El-Sheikh."><source src="videos/clip-08.mp4" type="video/mp4">Your browser does not support video playback. Open the original post below.</video><img class="video-print-poster" src="videos/poster-08.jpg" alt="Furniture Showroom Reel 02 still frame" /></div>
+ <div class="video-copy"><div class="video-meta"><span>Home Mix Furniture</span><span>1:31</span></div><h3 class="video-title">Furniture Showroom Reel 02</h3><div class="video-credit">Intro &amp; video editing</div><p class="video-description">A showroom reel combining furniture details, presenter footage and room-setting shots.</p><a class="video-source" href="https://www.facebook.com/share/r/1CCUyBsuTB/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">View original post &#8599;</a></div>
+</article></div></div></section>
+    </div>
   </main>
 
   <!-- ================= CONTACT FOOTER ================= -->
@@ -1965,11 +2035,12 @@
     const chapters = document.querySelectorAll('.work-chapter');
     const filterStatus = document.getElementById('filterStatus');
     const filterLabels = {
-      all: 'Showing All 4 Chapters',
+      all: 'Showing All 5 Chapters',
       ai: '01 — AI & Retouching (5 Cases)',
       campaigns: '02 — Brand Adaptations & Campaigns',
       commercial: '03 — Commercial Design (2 Brands)',
-      branding: '04 — Visual Identity & Branding (3 Brands)'
+      branding: '04 — Visual Identity & Branding (3 Brands)',
+      video: '05 - Video Editing & Motion Graphics (8 Projects)'
     };
 
     function setFilter(cat) {
@@ -2087,6 +2158,15 @@
       }
       document.body.removeChild(ta);
     }
+
+    // Play one showcase video at a time; stop playback when filtering away.
+    const showcaseVideos = Array.from(document.querySelectorAll('#video-work video'));
+    showcaseVideos.forEach(video => video.addEventListener('play', () => {
+      showcaseVideos.forEach(other => { if (other !== video) other.pause(); });
+    }));
+    filterTabs.forEach(tab => tab.addEventListener('click', () => {
+      if (!['all', 'video'].includes(tab.dataset.filter)) showcaseVideos.forEach(video => video.pause());
+    }));
   </script>
 </body>
 </html>
